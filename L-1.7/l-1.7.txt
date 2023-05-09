@@ -1,0 +1,10 @@
+
+A system call is a programmatic way to access the functionalities of the operating system, by shifting from user mode to kernel mode.
+System calls are necessary when accessing resources such as devices, files, or metadata, which are governed by the operating system.
+There are hundreds of system calls available in most operating systems, with some having up to 700 system calls (e.g. Windows 7).
+System calls can be accessed directly in some operating systems (e.g. Linux), or through APIs and local libraries (e.g. printf and scanner in C).
+System calls can be categorized into file-related, device-related, and information-related system calls.
+File-related system calls are used to access files, such as creating, opening, reading, or writing files.
+Device-related system calls are used to access hardware devices, such as hard disks, printers, or monitors, and to control their input and output.
+Information-related system calls are used to retrieve metadata or information related to processes or devices, such as process ID or file attributes.
+Overall, system calls are essential for accessing and utilizing the resources and functionalities of the operating system, and their proper usage can greatly enhance the performance and capabilities of an application or program.
