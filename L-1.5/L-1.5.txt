@@ -1,0 +1,19 @@
+lucture number 1.5
+L-1.5: Process States in Operating System| Schedulers(Long term,Short term,Medium term)
+Process states refer to the various stages through which a process passes from creation to termination.
+The primary states of a process include: New, Ready, Running, Terminated, and Wait/Block.
+The New state refers to the initial stage where the process is created but has not yet been loaded into the memory.
+The Ready state is where the process is loaded into the memory and is waiting for CPU time to execute.
+The Long Term Scheduler is responsible for bringing processes from the New state to the Ready state.
+The Running state is where the process is actively being executed by the CPU.
+The process is given a new address in the memory, where the CPU executes the instructions.
+The number of processes that can be in the Running state simultaneously depends on the number of CPUs available.
+The Terminated state is where the process has completed its execution and is removed from the memory.
+The Wait/Block state is where the process is waiting for an event such as an I/O operation to complete before it can continue.
+The process can move between these states as it executes, and the operating system manages the transitions.
+The process life cycle includes primary states, such as the running state, ready state, and wait/block state.
+The wait/block state occurs when a process requests an I/O operation and the CPU asks it to wait aside and complete the operation in the future.
+Additional states may exist, such as the suspend wait state when the wait/block queue is full and the medium turn scheduler sends a process to secondary memory temporarily.
+The suspend ready state occurs when the ready queue is full, and a process is put on hold until there is space in the queue again.
+The backing store is a term used when a process needs to be sent back to secondary memory before it can move to the ready state.
+The medium turn scheduler is responsible for handling processes that need to be sent to secondary memory temporarily due to various reasons, including filling of the ready queue.
