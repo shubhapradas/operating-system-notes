@@ -1,0 +1,48 @@
+
+Switching between user mode and kernel mode is a fundamental concept in computer operating systems. User mode is the mode in which user-level processes execute,
+ while kernel mode is the mode in which the operating system's kernel executes.
+
+When a user-level process needs to access the hardware or perform privileged operations (such as creating a new process), it must request the kernel's help. 
+The process switches from user mode to kernel mode to make the request, and the kernel performs the requested operation on behalf of the process.
+ After the operation is completed, the process switches back to user mode.
+
+By switching between user mode and kernel mode, the operating system can prevent user-level processes from accessing hardware or performing privileged operations 
+directly, which could cause system instability or security issues. The kernel acts as a gatekeeper, controlling access to system resources and ensuring that 
+user-level processes are only able to perform authorized actions.
+
+The video emphasizes the importance of switching between user mode and kernel mode to prevent problems because if user-level processes 
+were able to directly access the hardware or perform privileged operations, it would be easier for malicious software to take advantage of those 
+capabilities and compromise the system. Switching between user mode and kernel mode is a crucial security feature that helps to protect the system from 
+unauthorized access and misuse.
+
+The video compares the user mode to being a user at a bank, where the user cannot directly access the hardware or control the resources. 
+The kernel mode is compared to the bank clerk or PO, who can access the hardware and control the resources.
+ The operating system's responsibility is to manage and govern the resources.
+The concept of user mode and kernel mode is an essential part of operating systems. 
+
+In user mode, users can run applications and perform tasks using their laptops or computers. 
+On the other hand, all the core functionalities of the operating system, major drivers, and hardware components work in the kernel mode.
+
+To illustrate this concept with a simple example, consider using a Linux operating system and opening a text editor to write a C program that involves 
+reading and writing data to a file. As the file is stored in the hard disk, a hardware component, the kernel must be involved as users cannot access
+ the hardware directly.
+
+To access the hardware through the kernel, system calls are used. In the case of reading data from a file, the system call used is the "read" system call. 
+When this system call is executed, the system moves from user mode to kernel mode. This transition is signaled by an interrupt or a trap, 
+and the mode bit changes from 1 to 0.
+
+In kernel mode, the system call is executed, which involves reading the data from the hard disk. After reading the data, 
+the write system call is used to write the updated value back to the file. Once the process is complete, 
+the system transitions back from kernel mode to user mode, and the mode bit changes from 0 to 1.
+
+The user mode and kernel mode can be compared to the experience of withdrawing money from a bank. Users are in the user mode, 
+and the bank clerks are in the kernel mode. Users cannot directly access the hardware (money) but must fill out a form and hand it to 
+the clerks through the window. The clerks then process the request (system call) and hand over the money (updated value) to the user.
+ The user then leaves the bank, and the process is complete.
+
+The concept of user mode and kernel mode is essential as it prevents users from accessing the hardware directly, 
+which could cause significant problems. The operating system is responsible for managing and governing the resources, 
+and the dual-mode system allows for the seamless execution of user applications while also ensuring the proper functioning of the operating system.
+
+Overall, understanding the concept of user mode and kernel mode is critical for anyone studying or working with operating systems. 
+It is a theoretical topic, but it is essential to know for competitive exams and understanding the fundamental concepts of operating systems.
