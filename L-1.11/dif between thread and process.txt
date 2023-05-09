@@ -1,0 +1,43 @@
+Processes:
+
+Have different process IDs, parent IDs, code, data files, and memory addresses.
+Creating child processes uses more system resources, as each process has its own copy of code and data files.
+Context switching between processes is slower, as the operating system must save and restore all process values.
+Blocking a process does not block other processes, as they are independent.
+
+Threads:
+
+Share the same process ID, parent ID, code, data files, and memory addresses.
+Creating threads is faster and uses fewer system resources, as threads share the same code and data files.
+Context switching between threads is faster, as only the register and address values need to be saved and restored.
+Blocking a thread in a process will block the entire process, as threads are interdependent due to sharing memory and addresses.
+
+
+Topic: Difference between Process and Threads
+
+!)A process is a program in execution, while a thread is a subset of a process.
+2)A process has its own separate memory space, while threads share the same memory space as the parent process.
+3)Context switching in processes involves saving and restoring the entire process state, which is time-consuming, while context switching in threads involves only saving and restoring the thread context, which is less time-consuming.
+4)Blocking a process will not block other processes, but blocking a thread in a process will block the entire process.
+5)Processes are independent of each other, while threads within a process are interdependent and share resources.
+6)The operating system manages processes, but threads are managed by the application or user.
+7)Processes communicate with each other through inter-process communication mechanisms, while threads communicate with each other through shared memory or message passing.
+8)Processes are more heavyweight than threads as they require more system resources, such as memory and CPU time.
+9)Processes provide greater isolation and security than threads since they have their own memory space.
+10)Threads are more efficient than processes for tasks that involve frequent context switching and communication between threads.
+11)Processes are heavy weight tasks while threads are light weight tasks.
+In a multi-tasking environment with just one CPU, we can use either multiple processes or threads to perform multi-tasking.
+Multi-threading environment is generally used when the same process is running multiple times, such as in a print server.
+12)A process includes data, code, stack, registers, and other files. When we create a child process of an existing process, 
+it is called a clone and it has its own data, code, stack, and registers.
+When we create a thread of a process or divide a process into multiple threads, 
+all threads will share the same data and same code, and there will be no overhead.
+13)And they will have different process IDs, different memory spaces, and they will communicate through inter-process communication mechanisms like pipes, sockets, 
+and shared memory. On the other hand, threads of the same process share the same process ID, memory space, and resources. They communicate through shared variables, 
+locks, and semaphores. This makes threads faster and more efficient than processes as they require less overhead to communicate with each other.
+However, processes are more secure and robust than threads as they run independently of each other and a crash in one process does not affect other processes.
+14)So if the parent process gets blocked, then child process can still run independently because they are separate processes with 
+their own resources and do not depend on each other. But in the case of threads, if one thread gets blocked, 
+then it will block the whole process as all threads share the same resources and depend on each other. 
+This is another major difference between processes and threads. So these are the main points that 
+differentiate processes and threads in terms of system calls, memory usage, context switching, and blocking.
