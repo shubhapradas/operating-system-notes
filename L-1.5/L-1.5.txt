@@ -1,4 +1,4 @@
-lucture number 1.5
+lucture number 1.5 link:https://www.youtube.com/watch?v=2dJdHMpCLIg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=6
 L-1.5: Process States in Operating System| Schedulers(Long term,Short term,Medium term)
 Process states refer to the various stages through which a process passes from creation to termination.
 The primary states of a process include: New, Ready, Running, Terminated, and Wait/Block.
